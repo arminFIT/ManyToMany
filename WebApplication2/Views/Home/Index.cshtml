@@ -1,0 +1,20 @@
+﻿@model WebApplication2.Models.MovieZanrViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<form method="post" asp-action="Index" asp-controller="Home">
+    <div>
+        <section>
+            @Html.LabelFor(x => x.Naziv)
+            @Html.TextBoxFor(x => x.Naziv)
+        </section>
+        <section>
+            @Html.LabelFor(x => x.Trajanje)
+            @Html.TextBoxFor(x => x.Trajanje)
+        </section>
+        <section>
+            @Html.EditorFor(x => x.Zanrovi)
+        </section>
+        <input type="submit" value="Submit"  />
+    </div>
+</form>
